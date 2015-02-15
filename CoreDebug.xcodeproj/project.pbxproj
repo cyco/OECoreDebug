@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		833E39381A9141EF0068B120 /* hud_quicksave_notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 833E39361A9141EF0068B120 /* hud_quicksave_notification.png */; };
+		833E39391A9141EF0068B120 /* hud_quicksave_notification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 833E39371A9141EF0068B120 /* hud_quicksave_notification@2x.png */; };
 		83C5C3D41A90EA3C003C2DDB /* OEGameCoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5C3CA1A90D618003C2DDB /* OEGameCoreManager.m */; };
 		83C5C3DA1A90EA5A003C2DDB /* OEXPCGameCoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5C3D71A90EA5A003C2DDB /* OEXPCGameCoreManager.m */; };
 		83C5C3DB1A90EA5A003C2DDB /* OEXPCInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5C3D91A90EA5A003C2DDB /* OEXPCInterface.m */; };
@@ -69,6 +71,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		833E39361A9141EF0068B120 /* hud_quicksave_notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hud_quicksave_notification.png; path = "../../Interface Graphics/HUD/hud_quicksave_notification.png"; sourceTree = "<group>"; };
+		833E39371A9141EF0068B120 /* hud_quicksave_notification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hud_quicksave_notification@2x.png"; path = "../../Interface Graphics/HUD/hud_quicksave_notification@2x.png"; sourceTree = "<group>"; };
 		83C5C3C71A90D618003C2DDB /* OEGameCoreHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEGameCoreHelper.h; path = ../../OpenEmu/OEGameCoreHelper.h; sourceTree = "<group>"; };
 		83C5C3C81A90D618003C2DDB /* OEGameCoreManager_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEGameCoreManager_Internal.h; path = ../../OpenEmu/OEGameCoreManager_Internal.h; sourceTree = "<group>"; };
 		83C5C3C91A90D618003C2DDB /* OEGameCoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEGameCoreManager.h; path = ../../OpenEmu/OEGameCoreManager.h; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 		83F554861A9097FF00CFA34E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				833E39361A9141EF0068B120 /* hud_quicksave_notification.png */,
+				833E39371A9141EF0068B120 /* hud_quicksave_notification@2x.png */,
 				83F5548D1A9097FF00CFA34E /* Images.xcassets */,
 				83F554871A9097FF00CFA34E /* Info.plist */,
 				83F5548B1A9097FF00CFA34E /* main.m */,
@@ -430,8 +436,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833E39391A9141EF0068B120 /* hud_quicksave_notification@2x.png in Resources */,
 				83F5548E1A9097FF00CFA34E /* Images.xcassets in Resources */,
 				83F554911A9097FF00CFA34E /* MainMenu.xib in Resources */,
+				833E39381A9141EF0068B120 /* hud_quicksave_notification.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,12 +581,12 @@
 					/Users/chris/Shared/Development/OpenEmu/OpenEmu,
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OpenEmu-hfncqdfujfdqhvbjzbxihnkdstnj/Build/Products/Debug",
 				);
-				GCC_PREFIX_HEADER = CoreLauncher/OECoreDebug.pch;
+				GCC_PREFIX_HEADER = CoreDebug/OECoreDebug.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CoreLauncher/Info.plist;
+				INFOPLIST_FILE = CoreDebug/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = CoreDebug;
 			};
@@ -595,8 +603,8 @@
 					/Users/chris/Shared/Development/OpenEmu/OpenEmu,
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OpenEmu-hfncqdfujfdqhvbjzbxihnkdstnj/Build/Products/Debug",
 				);
-				GCC_PREFIX_HEADER = CoreLauncher/OECoreDebug.pch;
-				INFOPLIST_FILE = CoreLauncher/Info.plist;
+				GCC_PREFIX_HEADER = CoreDebug/OECoreDebug.pch;
+				INFOPLIST_FILE = CoreDebug/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = CoreDebug;
 			};
