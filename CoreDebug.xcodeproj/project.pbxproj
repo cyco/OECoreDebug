@@ -82,7 +82,7 @@
 		83C5C3E01A90EAB2003C2DDB /* OEThreadGameCoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OEThreadGameCoreManager.m; path = ../../OpenEmu/OEThreadGameCoreManager.m; sourceTree = "<group>"; };
 		83C5C3E11A90EAB2003C2DDB /* OEThreadProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEThreadProxy.h; path = ../../OpenEmu/OEThreadProxy.h; sourceTree = "<group>"; };
 		83C5C3E21A90EAB2003C2DDB /* OEThreadProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OEThreadProxy.m; path = ../../OpenEmu/OEThreadProxy.m; sourceTree = "<group>"; };
-		83C5C3E51A90EB01003C2DDB /* OECoreLauncher.pch */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = OECoreLauncher.pch; sourceTree = "<group>"; };
+		83C5C3E51A90EB01003C2DDB /* OECoreDebug.pch */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = OECoreDebug.pch; sourceTree = "<group>"; };
 		83C5C3E61A90EB41003C2DDB /* OEUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEUtilities.h; path = ../../OpenEmu/OEUtilities.h; sourceTree = "<group>"; };
 		83C5C3E71A90EB41003C2DDB /* OEUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OEUtilities.m; path = ../../OpenEmu/OEUtilities.m; sourceTree = "<group>"; };
 		83C5C3EA1A90EC27003C2DDB /* OpenEmuHelperApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenEmuHelperApp.h; path = ../../OpenEmu/OpenEmuHelperApp.h; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		83C5C4041A90EDD5003C2DDB /* OEDOGameCoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OEDOGameCoreManager.m; path = ../../OpenEmu/OEDOGameCoreManager.m; sourceTree = "<group>"; };
 		83C5C4061A90EDF8003C2DDB /* OETaskWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OETaskWrapper.h; path = ../../OpenEmu/OETaskWrapper.h; sourceTree = "<group>"; };
 		83C5C4071A90EDF8003C2DDB /* OETaskWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OETaskWrapper.m; path = ../../OpenEmu/OETaskWrapper.m; sourceTree = "<group>"; };
-		83F554831A9097FF00CFA34E /* CoreLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83F554831A9097FF00CFA34E /* CoreDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F554871A9097FF00CFA34E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83F554881A9097FF00CFA34E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83F554891A9097FF00CFA34E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 		83F5547A1A9097FF00CFA34E = {
 			isa = PBXGroup;
 			children = (
-				83F554851A9097FF00CFA34E /* CoreLauncher */,
+				83F554851A9097FF00CFA34E /* CoreDebug */,
 				83F554841A9097FF00CFA34E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -239,12 +239,12 @@
 		83F554841A9097FF00CFA34E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83F554831A9097FF00CFA34E /* CoreLauncher.app */,
+				83F554831A9097FF00CFA34E /* CoreDebug.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		83F554851A9097FF00CFA34E /* CoreLauncher */ = {
+		83F554851A9097FF00CFA34E /* CoreDebug */ = {
 			isa = PBXGroup;
 			children = (
 				83C5C3F41A90EC2B003C2DDB /* Helper App (IOSurface helper) */,
@@ -253,7 +253,7 @@
 				83F554861A9097FF00CFA34E /* Supporting Files */,
 				83F554B61A909CD600CFA34E /* Frameworks & Libraries */,
 			);
-			path = CoreLauncher;
+			path = CoreDebug;
 			sourceTree = "<group>";
 		};
 		83F554861A9097FF00CFA34E /* Supporting Files */ = {
@@ -263,7 +263,7 @@
 				83F554871A9097FF00CFA34E /* Info.plist */,
 				83F5548B1A9097FF00CFA34E /* main.m */,
 				83F5548F1A9097FF00CFA34E /* MainMenu.xib */,
-				83C5C3E51A90EB01003C2DDB /* OECoreLauncher.pch */,
+				83C5C3E51A90EB01003C2DDB /* OECoreDebug.pch */,
 				83C5C3E61A90EB41003C2DDB /* OEUtilities.h */,
 				83C5C3E71A90EB41003C2DDB /* OEUtilities.m */,
 			);
@@ -375,9 +375,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83F554821A9097FF00CFA34E /* CoreLauncher */ = {
+		83F554821A9097FF00CFA34E /* CoreDebug */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83F554A01A9097FF00CFA34E /* Build configuration list for PBXNativeTarget "CoreLauncher" */;
+			buildConfigurationList = 83F554A01A9097FF00CFA34E /* Build configuration list for PBXNativeTarget "CoreDebug" */;
 			buildPhases = (
 				83F5547F1A9097FF00CFA34E /* Sources */,
 				83F554801A9097FF00CFA34E /* Frameworks */,
@@ -388,9 +388,9 @@
 			);
 			dependencies = (
 			);
-			name = CoreLauncher;
+			name = CoreDebug;
 			productName = CoreLauncher;
-			productReference = 83F554831A9097FF00CFA34E /* CoreLauncher.app */;
+			productReference = 83F554831A9097FF00CFA34E /* CoreDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -407,7 +407,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83F5547E1A9097FF00CFA34E /* Build configuration list for PBXProject "CoreLauncher" */;
+			buildConfigurationList = 83F5547E1A9097FF00CFA34E /* Build configuration list for PBXProject "CoreDebug" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -420,7 +420,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83F554821A9097FF00CFA34E /* CoreLauncher */,
+				83F554821A9097FF00CFA34E /* CoreDebug */,
 			);
 		};
 /* End PBXProject section */
@@ -573,14 +573,14 @@
 					/Users/chris/Shared/Development/OpenEmu/OpenEmu,
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OpenEmu-hfncqdfujfdqhvbjzbxihnkdstnj/Build/Products/Debug",
 				);
-				GCC_PREFIX_HEADER = CoreLauncher/OECoreLauncher.pch;
+				GCC_PREFIX_HEADER = CoreLauncher/OECoreDebug.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = CoreLauncher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreDebug;
 			};
 			name = Debug;
 		};
@@ -595,17 +595,17 @@
 					/Users/chris/Shared/Development/OpenEmu/OpenEmu,
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/OpenEmu-hfncqdfujfdqhvbjzbxihnkdstnj/Build/Products/Debug",
 				);
-				GCC_PREFIX_HEADER = CoreLauncher/OECoreLauncher.pch;
+				GCC_PREFIX_HEADER = CoreLauncher/OECoreDebug.pch;
 				INFOPLIST_FILE = CoreLauncher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreDebug;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83F5547E1A9097FF00CFA34E /* Build configuration list for PBXProject "CoreLauncher" */ = {
+		83F5547E1A9097FF00CFA34E /* Build configuration list for PBXProject "CoreDebug" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83F5549E1A9097FF00CFA34E /* Debug */,
@@ -614,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83F554A01A9097FF00CFA34E /* Build configuration list for PBXNativeTarget "CoreLauncher" */ = {
+		83F554A01A9097FF00CFA34E /* Build configuration list for PBXNativeTarget "CoreDebug" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83F554A11A9097FF00CFA34E /* Debug */,
