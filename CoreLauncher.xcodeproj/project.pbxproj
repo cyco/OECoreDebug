@@ -29,7 +29,6 @@
 		83F5548C1A9097FF00CFA34E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F5548B1A9097FF00CFA34E /* main.m */; };
 		83F5548E1A9097FF00CFA34E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F5548D1A9097FF00CFA34E /* Images.xcassets */; };
 		83F554911A9097FF00CFA34E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F5548F1A9097FF00CFA34E /* MainMenu.xib */; };
-		83F5549D1A9097FF00CFA34E /* CoreLauncherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F5549C1A9097FF00CFA34E /* CoreLauncherTests.m */; };
 		83F554A91A909C3200CFA34E /* OEPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F554A81A909C3200CFA34E /* OEPlugin.m */; };
 		83F554AC1A909C4100CFA34E /* OECorePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F554AB1A909C4100CFA34E /* OECorePlugin.m */; };
 		83F554AF1A909C4F00CFA34E /* OESystemPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F554AE1A909C4F00CFA34E /* OESystemPlugin.m */; };
@@ -50,16 +49,6 @@
 		83F554E81A90A57200CFA34E /* snes_ntsc.c in Sources */ = {isa = PBXBuildFile; fileRef = 83F554E01A90A57200CFA34E /* snes_ntsc.c */; };
 		83F554EE1A90A84800CFA34E /* OELGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F554ED1A90A84800CFA34E /* OELGameViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		83F554971A9097FF00CFA34E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83F5547B1A9097FF00CFA34E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 83F554821A9097FF00CFA34E;
-			remoteInfo = CoreLauncher;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		83F554D41A909EBB00CFA34E /* Copy Frameworks */ = {
@@ -118,9 +107,6 @@
 		83F5548B1A9097FF00CFA34E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83F5548D1A9097FF00CFA34E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83F554901A9097FF00CFA34E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		83F554961A9097FF00CFA34E /* CoreLauncherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreLauncherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		83F5549B1A9097FF00CFA34E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83F5549C1A9097FF00CFA34E /* CoreLauncherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreLauncherTests.m; sourceTree = "<group>"; };
 		83F554A71A909C3200CFA34E /* OEPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEPlugin.h; path = ../../OpenEmu/OEPlugin.h; sourceTree = "<group>"; };
 		83F554A81A909C3200CFA34E /* OEPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OEPlugin.m; path = ../../OpenEmu/OEPlugin.m; sourceTree = "<group>"; };
 		83F554AA1A909C4100CFA34E /* OECorePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OECorePlugin.h; path = ../../OpenEmu/OECorePlugin.h; sourceTree = "<group>"; };
@@ -175,13 +161,6 @@
 				83C5C3FF1A90ECE4003C2DDB /* OpenEmuXPCCommunicator.framework in Frameworks */,
 				83F554D01A909E2200CFA34E /* OpenGL.framework in Frameworks */,
 				83F554B81A909CE700CFA34E /* Cg.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83F554931A9097FF00CFA34E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				83F554851A9097FF00CFA34E /* CoreLauncher */,
-				83F554991A9097FF00CFA34E /* CoreLauncherTests */,
 				83F554841A9097FF00CFA34E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -262,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				83F554831A9097FF00CFA34E /* CoreLauncher.app */,
-				83F554961A9097FF00CFA34E /* CoreLauncherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,23 +266,6 @@
 				83C5C3E51A90EB01003C2DDB /* OECoreLauncher.pch */,
 				83C5C3E61A90EB41003C2DDB /* OEUtilities.h */,
 				83C5C3E71A90EB41003C2DDB /* OEUtilities.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		83F554991A9097FF00CFA34E /* CoreLauncherTests */ = {
-			isa = PBXGroup;
-			children = (
-				83F5549C1A9097FF00CFA34E /* CoreLauncherTests.m */,
-				83F5549A1A9097FF00CFA34E /* Supporting Files */,
-			);
-			path = CoreLauncherTests;
-			sourceTree = "<group>";
-		};
-		83F5549A1A9097FF00CFA34E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				83F5549B1A9097FF00CFA34E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -433,24 +393,6 @@
 			productReference = 83F554831A9097FF00CFA34E /* CoreLauncher.app */;
 			productType = "com.apple.product-type.application";
 		};
-		83F554951A9097FF00CFA34E /* CoreLauncherTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 83F554A31A9097FF00CFA34E /* Build configuration list for PBXNativeTarget "CoreLauncherTests" */;
-			buildPhases = (
-				83F554921A9097FF00CFA34E /* Sources */,
-				83F554931A9097FF00CFA34E /* Frameworks */,
-				83F554941A9097FF00CFA34E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				83F554981A9097FF00CFA34E /* PBXTargetDependency */,
-			);
-			name = CoreLauncherTests;
-			productName = CoreLauncherTests;
-			productReference = 83F554961A9097FF00CFA34E /* CoreLauncherTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -462,10 +404,6 @@
 				TargetAttributes = {
 					83F554821A9097FF00CFA34E = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					83F554951A9097FF00CFA34E = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 83F554821A9097FF00CFA34E;
 					};
 				};
 			};
@@ -483,7 +421,6 @@
 			projectRoot = "";
 			targets = (
 				83F554821A9097FF00CFA34E /* CoreLauncher */,
-				83F554951A9097FF00CFA34E /* CoreLauncherTests */,
 			);
 		};
 /* End PBXProject section */
@@ -495,13 +432,6 @@
 			files = (
 				83F5548E1A9097FF00CFA34E /* Images.xcassets in Resources */,
 				83F554911A9097FF00CFA34E /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83F554941A9097FF00CFA34E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,23 +472,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83F554921A9097FF00CFA34E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83F5549D1A9097FF00CFA34E /* CoreLauncherTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		83F554981A9097FF00CFA34E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 83F554821A9097FF00CFA34E /* CoreLauncher */;
-			targetProxy = 83F554971A9097FF00CFA34E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		83F5548F1A9097FF00CFA34E /* MainMenu.xib */ = {
@@ -688,42 +602,6 @@
 			};
 			name = Release;
 		};
-		83F554A41A9097FF00CFA34E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CoreLauncherTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreLauncher.app/Contents/MacOS/CoreLauncher";
-			};
-			name = Debug;
-		};
-		83F554A51A9097FF00CFA34E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CoreLauncherTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreLauncher.app/Contents/MacOS/CoreLauncher";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -741,15 +619,6 @@
 			buildConfigurations = (
 				83F554A11A9097FF00CFA34E /* Debug */,
 				83F554A21A9097FF00CFA34E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		83F554A31A9097FF00CFA34E /* Build configuration list for PBXNativeTarget "CoreLauncherTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				83F554A41A9097FF00CFA34E /* Debug */,
-				83F554A51A9097FF00CFA34E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
