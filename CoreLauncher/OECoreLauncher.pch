@@ -1,0 +1,25 @@
+//
+//  OECoreLauncher.pch
+//  CoreLauncher
+//
+//  Created by Christoph Leimbrock on 2/15/15.
+//  Copyright (c) 2015 ccl. All rights reserved.
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import "OEUtilities.h"
+
+#if __has_feature(objc_bool)
+#undef YES
+#undef NO
+#define YES __objc_yes
+#define NO __objc_no
+#endif
+
+#ifdef DEBUG_PRINT
+#define DLog(format, ...) NSLog(@"%@:%d: %s: " format, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, __FUNCTION__, ##__VA_ARGS__)
+#else
+#define DLog(format, ...) do {} while (0)
+#endif
+#endif
