@@ -38,7 +38,9 @@
 #import "OEDOGameCoreManager.h"
 #import "OEThreadGameCoreManager.h"
 
-NSString * const OECoreLauncherLastROMPath = @"OECoreLauncherLastROMPath";
+NSString * const OECoreLauncherLastROMPathKey = @"OECoreLauncherLastROMPath";
+NSString * const OECoreLauncherVolumeKey = @"volume";
+NSString * const OECoreLauncherFilterKey = @"filter";
 
 @interface AppDelegate ()
 @property (weak) IBOutlet NSWindow *window;
@@ -52,13 +54,12 @@ NSString * const OECoreLauncherLastROMPath = @"OECoreLauncherLastROMPath";
     [self loadPlugins];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString    *lastRomPath = [defaults objectForKey:OECoreLauncherLastROMPath];
-    NSURL       *lastRomURL  = [NSURL URLWithString:lastRomPath];
+    NSString    *lastRomPath = [defaults objectForKey:OECoreLauncherLastROMPathKey];
+    NSURL       *lastRomURL  = [NSURL fileURLWithPath:lastRomPath];
 
     // Prompt user for rom path if alt-key is held down or the last rom can't be found
-
     if(([NSEvent modifierFlags] & NSAlternateKeyMask)
-       || (lastRomPath != nil)
+       || (lastRomPath == nil)
        || ![[NSFileManager defaultManager] fileExistsAtPath:lastRomPath])
     {
         [self openDocument:nil];
@@ -96,7 +97,7 @@ NSString * const OECoreLauncherLastROMPath = @"OECoreLauncherLastROMPath";
     if(![validExtensions containsObject:extension])
     {
         NSLog(@"Invalid Extension (%@ not in %@)", extension, validExtensions);
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:OECoreLauncherLastROMPath];
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:OECoreLauncherLastROMPathKey];
         return;
     }
 
@@ -126,14 +127,22 @@ NSString * const OECoreLauncherLastROMPath = @"OECoreLauncherLastROMPath";
                                                           displayHelper:displayHelper];
     [self setGameCoreManager:manager];
 
-    [[NSUserDefaults standardUserDefaults] setObject:romPath forKey:OECoreLauncherLastROMPath];
+    [[NSUserDefaults standardUserDefaults] setObject:romPath forKey:OECoreLauncherLastROMPathKey];
 
     [manager loadROMWithCompletionHandler:^(id systemClient)
     {
         [manager setupEmulationWithCompletionHandler:^(IOSurfaceID surfaceID, OEIntSize screenSize, OEIntSize aspectSize)
          {
              [displayHelper setScreenSize:screenSize aspectSize:aspectSize withIOSurfaceID:surfaceID];
-             [manager startEmulationWithCompletionHandler:^{ }];
+             [manager startEmulationWithCompletionHandler:^{
+
+                 // Set default volume / filter
+                 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                 NSString *filterName = [defaults objectForKey:OECoreLauncherFilterKey];
+                 CGFloat volume = [defaults floatForKey:OECoreLauncherVolumeKey];
+                 [manager setVolume:volume];
+                 [[[self window] contentView] setFilterName:filterName];
+             }];
          }];
     } errorHandler:^(NSError *error) {
     }];
@@ -170,9 +179,100 @@ NSString * const OECoreLauncherLastROMPath = @"OECoreLauncherLastROMPath";
         if(result == NSFileHandlingPanelOKButton)
         {
             NSURL *romURL = [panel URL];
-            [[NSUserDefaults standardUserDefaults] setObject:[romURL path] forKey:OECoreLauncherLastROMPath];
+            [[NSUserDefaults standardUserDefaults] setObject:[romURL path] forKey:OECoreLauncherLastROMPathKey];
             [self _launchRomWithURL:romURL error:nil];
         }
     }];
 }
+
+#pragma mark - Toolbar Actions
+- (IBAction)togglePause:(id)sender
+{}
+- (IBAction)resetEmulation:(id)sender
+{}
+- (IBAction)changeFilter:(id)sender
+{
+    NSString *filterName = [[sender selectedItem] title];
+    NSWindow *window = [self window];
+    OEGameView *view = (OEGameView *)[window contentView];
+
+    [view setFilterName:filterName];
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:filterName forKey:OECoreLauncherFilterKey];
+}
+
+- (IBAction)changeVolume:(id)sender
+{
+    CGFloat volume = [sender floatValue];
+    [[self gameCoreManager] setVolume:volume];
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setFloat:volume forKey:OECoreLauncherVolumeKey];
+}
+#pragma mark -
+- (NSToolbarItem*)toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag
+{
+    NSLog(@"%@ willBeInserted: %d", itemIdentifier, flag);
+
+    NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
+    if([itemIdentifier rangeOfString:@"NS"].location == 0)
+        return item;
+
+    if([itemIdentifier isEqualToString:@"OEToolbarItemFilter"])
+    {
+        NSString *label = @"Filter";
+        NSPopUpButton *button = [[NSPopUpButton alloc] initWithFrame:NSZeroRect];
+        NSMenuItem *menuItemRep = [[NSMenuItem alloc] initWithTitle:label action:@selector(changeFilter:) keyEquivalent:@""];
+
+        NSArray *filterNames = [[[OEShaderPlugin allPluginNames] filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+            return [evaluatedObject characterAtIndex:0] != '_';
+        }]] sortedArrayUsingSelector:@selector(localizedCompare:)];
+
+        [button addItemsWithTitles:filterNames];
+        [button setTarget:self];
+        [button setAction:@selector(changeFilter:)];
+
+        [item setLabel:label];
+        [item setMinSize:NSMakeSize(150, 20)];
+        [item setMenuFormRepresentation:menuItemRep];
+        [item setView:button];
+
+        // Restore previous selection
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString *filter = [defaults objectForKey:OECoreLauncherFilterKey] ?: @"Nearest Neighbor";
+        [button selectItemWithTitle:filter];
+    }
+    else if([itemIdentifier isEqualToString:@"OEToolbarItemVolume"])
+    {
+        NSString *label = @"Volume";
+        NSMenuItem *menuItemRep = [[NSMenuItem alloc] initWithTitle:label action:NULL keyEquivalent:@""];
+        NSSlider *slider = [[NSSlider alloc] initWithFrame:NSZeroRect];
+
+        [slider setContinuous:YES];
+        [slider setTarget:self];
+        [slider setAction:@selector(changeVolume:)];
+        [slider setMinValue:0.0];
+        [slider setMaxValue:1.0];
+
+        [item setLabel:label];
+        [item setMenuFormRepresentation:menuItemRep];
+        [item setMinSize:NSMakeSize(100, 20)];
+        [item setView:slider];
+
+        // Restore previous selection
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        CGFloat currentVolume = [defaults floatForKey:OECoreLauncherVolumeKey];
+        [slider setFloatValue:currentVolume];
+
+    }
+
+    return item;
+}
+
+- (NSArray*)toolbarDefaultItemIdentifiers:(NSToolbar *)toolbar
+{
+    return @[@"OEToolbarItemTogglePause", @"OEToolbarItemReset", NSToolbarFlexibleSpaceItemIdentifier, @"OEToolbarItemFilter", @"OEToolbarItemVolume"];
+}
+
 @end

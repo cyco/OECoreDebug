@@ -8,7 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		833E39381A9141EF0068B120 /* hud_quicksave_notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 833E39361A9141EF0068B120 /* hud_quicksave_notification.png */; };
-		833E39391A9141EF0068B120 /* hud_quicksave_notification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 833E39371A9141EF0068B120 /* hud_quicksave_notification@2x.png */; };
+		8353070E1A93C81400009BFB /* _pass2.inc in Sources */ = {isa = PBXBuildFile; fileRef = 835306EA1A93C81400009BFB /* _pass2.inc */; };
+		835307171A93C81400009BFB /* _ntsc-decode-filter-3phase.inc in Sources */ = {isa = PBXBuildFile; fileRef = 835306F41A93C81400009BFB /* _ntsc-decode-filter-3phase.inc */; };
+		835307191A93C81400009BFB /* _ntsc-param.inc in Sources */ = {isa = PBXBuildFile; fileRef = 835306F61A93C81400009BFB /* _ntsc-param.inc */; };
+		8353071B1A93C81400009BFB /* _ntsc-pass1-encode-demodulate.inc in Sources */ = {isa = PBXBuildFile; fileRef = 835306F81A93C81400009BFB /* _ntsc-pass1-encode-demodulate.inc */; };
+		8353071C1A93C81400009BFB /* _ntsc-pass1-vertex.inc in Sources */ = {isa = PBXBuildFile; fileRef = 835306F91A93C81400009BFB /* _ntsc-pass1-vertex.inc */; };
+		8353071E1A93C81400009BFB /* _ntsc-pass2-decode.inc in Sources */ = {isa = PBXBuildFile; fileRef = 835306FB1A93C81400009BFB /* _ntsc-pass2-decode.inc */; };
+		8353071F1A93C81400009BFB /* _ntsc-pass2-vertex.inc in Sources */ = {isa = PBXBuildFile; fileRef = 835306FC1A93C81400009BFB /* _ntsc-pass2-vertex.inc */; };
+		835307201A93C81400009BFB /* _ntsc-rgbyuv.inc in Sources */ = {isa = PBXBuildFile; fileRef = 835306FD1A93C81400009BFB /* _ntsc-rgbyuv.inc */; };
+		835307241A93C83200009BFB /* _beam4_1.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306DB1A93C81400009BFB /* _beam4_1.cg */; };
+		835307251A93C83200009BFB /* _beam4_2.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306DC1A93C81400009BFB /* _beam4_2.cg */; };
+		835307261A93C83200009BFB /* _beam4_3.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306DD1A93C81400009BFB /* _beam4_3.cg */; };
+		835307271A93C83200009BFB /* _stock.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306DE1A93C81400009BFB /* _stock.cg */; };
+		835307281A93C83200009BFB /* Beam4.cgp in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306DF1A93C81400009BFB /* Beam4.cgp */; };
+		835307291A93C83200009BFB /* Blinky.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306E01A93C81400009BFB /* Blinky.cg */; };
+		8353072A1A93C83200009BFB /* CRT.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306E11A93C81400009BFB /* CRT.cg */; };
+		8353072B1A93C83200009BFB /* _hq2x.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306E31A93C81400009BFB /* _hq2x.cg */; };
+		8353072C1A93C83200009BFB /* _hq2x.png in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306E41A93C81400009BFB /* _hq2x.png */; };
+		8353072D1A93C83200009BFB /* _hq3x.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306E51A93C81400009BFB /* _hq3x.cg */; };
+		8353072E1A93C83200009BFB /* _hq3x.png in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306E61A93C81400009BFB /* _hq3x.png */; };
+		8353072F1A93C83200009BFB /* _hq4x.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306E71A93C81400009BFB /* _hq4x.cg */; };
+		835307301A93C83200009BFB /* _hq4x.png in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306E81A93C81400009BFB /* _hq4x.png */; };
+		835307311A93C83200009BFB /* _pass1.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306E91A93C81400009BFB /* _pass1.cg */; };
+		835307321A93C83200009BFB /* _pass2.inc in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306EA1A93C81400009BFB /* _pass2.inc */; };
+		835307331A93C83200009BFB /* HQ2x.cgp in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306EB1A93C81400009BFB /* HQ2x.cgp */; };
+		835307341A93C83200009BFB /* HQ3x.cgp in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306EC1A93C81400009BFB /* HQ3x.cgp */; };
+		835307351A93C83200009BFB /* HQ4x.cgp in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306ED1A93C81400009BFB /* HQ4x.cgp */; };
+		835307361A93C83200009BFB /* LCD3x.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306EE1A93C81400009BFB /* LCD3x.cg */; };
+		835307371A93C83200009BFB /* NTSC (Blargg).cgp in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306EF1A93C81400009BFB /* NTSC (Blargg).cgp */; };
+		835307381A93C83200009BFB /* Pixellate.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306F01A93C81400009BFB /* Pixellate.cg */; };
+		835307391A93C83200009BFB /* SABR.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306F11A93C81400009BFB /* SABR.cg */; };
+		8353073A1A93C83200009BFB /* Scanline.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306F21A93C81400009BFB /* Scanline.cg */; };
+		8353073B1A93C83200009BFB /* _ntsc-decode-filter-3phase.inc in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306F41A93C81400009BFB /* _ntsc-decode-filter-3phase.inc */; };
+		8353073C1A93C83200009BFB /* _ntsc-gauss-pass.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306F51A93C81400009BFB /* _ntsc-gauss-pass.cg */; };
+		8353073D1A93C83200009BFB /* _ntsc-param.inc in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306F61A93C81400009BFB /* _ntsc-param.inc */; };
+		8353073E1A93C83200009BFB /* _ntsc-pass1-composite-3phase.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306F71A93C81400009BFB /* _ntsc-pass1-composite-3phase.cg */; };
+		8353073F1A93C83200009BFB /* _ntsc-pass1-encode-demodulate.inc in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306F81A93C81400009BFB /* _ntsc-pass1-encode-demodulate.inc */; };
+		835307401A93C83200009BFB /* _ntsc-pass1-vertex.inc in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306F91A93C81400009BFB /* _ntsc-pass1-vertex.inc */; };
+		835307411A93C83200009BFB /* _ntsc-pass2-3phase.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306FA1A93C81400009BFB /* _ntsc-pass2-3phase.cg */; };
+		835307421A93C83200009BFB /* _ntsc-pass2-decode.inc in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306FB1A93C81400009BFB /* _ntsc-pass2-decode.inc */; };
+		835307431A93C83200009BFB /* _ntsc-pass2-vertex.inc in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306FC1A93C81400009BFB /* _ntsc-pass2-vertex.inc */; };
+		835307441A93C83200009BFB /* _ntsc-rgbyuv.inc in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306FD1A93C81400009BFB /* _ntsc-rgbyuv.inc */; };
+		835307451A93C83200009BFB /* _ntsc-stock.cg in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306FE1A93C81400009BFB /* _ntsc-stock.cg */; };
+		835307461A93C83200009BFB /* NTSC.cgp in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 835306FF1A93C81400009BFB /* NTSC.cgp */; };
 		83C5C3D41A90EA3C003C2DDB /* OEGameCoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5C3CA1A90D618003C2DDB /* OEGameCoreManager.m */; };
 		83C5C3DA1A90EA5A003C2DDB /* OEXPCGameCoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5C3D71A90EA5A003C2DDB /* OEXPCGameCoreManager.m */; };
 		83C5C3DB1A90EA5A003C2DDB /* OEXPCInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5C3D91A90EA5A003C2DDB /* OEXPCInterface.m */; };
@@ -53,6 +95,51 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		835307231A93C82000009BFB /* Copy Shaders */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Filters;
+			dstSubfolderSpec = 13;
+			files = (
+				835307241A93C83200009BFB /* _beam4_1.cg in Copy Shaders */,
+				835307251A93C83200009BFB /* _beam4_2.cg in Copy Shaders */,
+				835307261A93C83200009BFB /* _beam4_3.cg in Copy Shaders */,
+				835307271A93C83200009BFB /* _stock.cg in Copy Shaders */,
+				835307281A93C83200009BFB /* Beam4.cgp in Copy Shaders */,
+				835307291A93C83200009BFB /* Blinky.cg in Copy Shaders */,
+				8353072A1A93C83200009BFB /* CRT.cg in Copy Shaders */,
+				8353072B1A93C83200009BFB /* _hq2x.cg in Copy Shaders */,
+				8353072C1A93C83200009BFB /* _hq2x.png in Copy Shaders */,
+				8353072D1A93C83200009BFB /* _hq3x.cg in Copy Shaders */,
+				8353072E1A93C83200009BFB /* _hq3x.png in Copy Shaders */,
+				8353072F1A93C83200009BFB /* _hq4x.cg in Copy Shaders */,
+				835307301A93C83200009BFB /* _hq4x.png in Copy Shaders */,
+				835307311A93C83200009BFB /* _pass1.cg in Copy Shaders */,
+				835307321A93C83200009BFB /* _pass2.inc in Copy Shaders */,
+				835307331A93C83200009BFB /* HQ2x.cgp in Copy Shaders */,
+				835307341A93C83200009BFB /* HQ3x.cgp in Copy Shaders */,
+				835307351A93C83200009BFB /* HQ4x.cgp in Copy Shaders */,
+				835307361A93C83200009BFB /* LCD3x.cg in Copy Shaders */,
+				835307371A93C83200009BFB /* NTSC (Blargg).cgp in Copy Shaders */,
+				835307381A93C83200009BFB /* Pixellate.cg in Copy Shaders */,
+				835307391A93C83200009BFB /* SABR.cg in Copy Shaders */,
+				8353073A1A93C83200009BFB /* Scanline.cg in Copy Shaders */,
+				8353073B1A93C83200009BFB /* _ntsc-decode-filter-3phase.inc in Copy Shaders */,
+				8353073C1A93C83200009BFB /* _ntsc-gauss-pass.cg in Copy Shaders */,
+				8353073D1A93C83200009BFB /* _ntsc-param.inc in Copy Shaders */,
+				8353073E1A93C83200009BFB /* _ntsc-pass1-composite-3phase.cg in Copy Shaders */,
+				8353073F1A93C83200009BFB /* _ntsc-pass1-encode-demodulate.inc in Copy Shaders */,
+				835307401A93C83200009BFB /* _ntsc-pass1-vertex.inc in Copy Shaders */,
+				835307411A93C83200009BFB /* _ntsc-pass2-3phase.cg in Copy Shaders */,
+				835307421A93C83200009BFB /* _ntsc-pass2-decode.inc in Copy Shaders */,
+				835307431A93C83200009BFB /* _ntsc-pass2-vertex.inc in Copy Shaders */,
+				835307441A93C83200009BFB /* _ntsc-rgbyuv.inc in Copy Shaders */,
+				835307451A93C83200009BFB /* _ntsc-stock.cg in Copy Shaders */,
+				835307461A93C83200009BFB /* NTSC.cgp in Copy Shaders */,
+			);
+			name = "Copy Shaders";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83F554D41A909EBB00CFA34E /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,6 +160,41 @@
 /* Begin PBXFileReference section */
 		833E39361A9141EF0068B120 /* hud_quicksave_notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hud_quicksave_notification.png; path = "../../Interface Graphics/HUD/hud_quicksave_notification.png"; sourceTree = "<group>"; };
 		833E39371A9141EF0068B120 /* hud_quicksave_notification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hud_quicksave_notification@2x.png"; path = "../../Interface Graphics/HUD/hud_quicksave_notification@2x.png"; sourceTree = "<group>"; };
+		835306DB1A93C81400009BFB /* _beam4_1.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = _beam4_1.cg; path = ../../OpenEmu/Shaders/_beam4_1.cg; sourceTree = "<group>"; };
+		835306DC1A93C81400009BFB /* _beam4_2.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = _beam4_2.cg; path = ../../OpenEmu/Shaders/_beam4_2.cg; sourceTree = "<group>"; };
+		835306DD1A93C81400009BFB /* _beam4_3.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = _beam4_3.cg; path = ../../OpenEmu/Shaders/_beam4_3.cg; sourceTree = "<group>"; };
+		835306DE1A93C81400009BFB /* _stock.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = _stock.cg; path = ../../OpenEmu/Shaders/_stock.cg; sourceTree = "<group>"; };
+		835306DF1A93C81400009BFB /* Beam4.cgp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Beam4.cgp; path = ../../OpenEmu/Shaders/Beam4.cgp; sourceTree = "<group>"; };
+		835306E01A93C81400009BFB /* Blinky.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Blinky.cg; path = ../../OpenEmu/Shaders/Blinky.cg; sourceTree = "<group>"; };
+		835306E11A93C81400009BFB /* CRT.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CRT.cg; path = ../../OpenEmu/Shaders/CRT.cg; sourceTree = "<group>"; };
+		835306E31A93C81400009BFB /* _hq2x.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _hq2x.cg; sourceTree = "<group>"; };
+		835306E41A93C81400009BFB /* _hq2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _hq2x.png; sourceTree = "<group>"; };
+		835306E51A93C81400009BFB /* _hq3x.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _hq3x.cg; sourceTree = "<group>"; };
+		835306E61A93C81400009BFB /* _hq3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _hq3x.png; sourceTree = "<group>"; };
+		835306E71A93C81400009BFB /* _hq4x.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _hq4x.cg; sourceTree = "<group>"; };
+		835306E81A93C81400009BFB /* _hq4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _hq4x.png; sourceTree = "<group>"; };
+		835306E91A93C81400009BFB /* _pass1.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _pass1.cg; sourceTree = "<group>"; };
+		835306EA1A93C81400009BFB /* _pass2.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = _pass2.inc; sourceTree = "<group>"; };
+		835306EB1A93C81400009BFB /* HQ2x.cgp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HQ2x.cgp; sourceTree = "<group>"; };
+		835306EC1A93C81400009BFB /* HQ3x.cgp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HQ3x.cgp; sourceTree = "<group>"; };
+		835306ED1A93C81400009BFB /* HQ4x.cgp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HQ4x.cgp; sourceTree = "<group>"; };
+		835306EE1A93C81400009BFB /* LCD3x.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LCD3x.cg; path = ../../OpenEmu/Shaders/LCD3x.cg; sourceTree = "<group>"; };
+		835306EF1A93C81400009BFB /* NTSC (Blargg).cgp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "NTSC (Blargg).cgp"; path = "../../OpenEmu/Shaders/NTSC (Blargg).cgp"; sourceTree = "<group>"; };
+		835306F01A93C81400009BFB /* Pixellate.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Pixellate.cg; path = ../../OpenEmu/Shaders/Pixellate.cg; sourceTree = "<group>"; };
+		835306F11A93C81400009BFB /* SABR.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SABR.cg; path = ../../OpenEmu/Shaders/SABR.cg; sourceTree = "<group>"; };
+		835306F21A93C81400009BFB /* Scanline.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Scanline.cg; path = ../../OpenEmu/Shaders/Scanline.cg; sourceTree = "<group>"; };
+		835306F41A93C81400009BFB /* _ntsc-decode-filter-3phase.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "_ntsc-decode-filter-3phase.inc"; sourceTree = "<group>"; };
+		835306F51A93C81400009BFB /* _ntsc-gauss-pass.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "_ntsc-gauss-pass.cg"; sourceTree = "<group>"; };
+		835306F61A93C81400009BFB /* _ntsc-param.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "_ntsc-param.inc"; sourceTree = "<group>"; };
+		835306F71A93C81400009BFB /* _ntsc-pass1-composite-3phase.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "_ntsc-pass1-composite-3phase.cg"; sourceTree = "<group>"; };
+		835306F81A93C81400009BFB /* _ntsc-pass1-encode-demodulate.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "_ntsc-pass1-encode-demodulate.inc"; sourceTree = "<group>"; };
+		835306F91A93C81400009BFB /* _ntsc-pass1-vertex.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "_ntsc-pass1-vertex.inc"; sourceTree = "<group>"; };
+		835306FA1A93C81400009BFB /* _ntsc-pass2-3phase.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "_ntsc-pass2-3phase.cg"; sourceTree = "<group>"; };
+		835306FB1A93C81400009BFB /* _ntsc-pass2-decode.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "_ntsc-pass2-decode.inc"; sourceTree = "<group>"; };
+		835306FC1A93C81400009BFB /* _ntsc-pass2-vertex.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "_ntsc-pass2-vertex.inc"; sourceTree = "<group>"; };
+		835306FD1A93C81400009BFB /* _ntsc-rgbyuv.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "_ntsc-rgbyuv.inc"; sourceTree = "<group>"; };
+		835306FE1A93C81400009BFB /* _ntsc-stock.cg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "_ntsc-stock.cg"; sourceTree = "<group>"; };
+		835306FF1A93C81400009BFB /* NTSC.cgp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NTSC.cgp; sourceTree = "<group>"; };
 		83C5C3C71A90D618003C2DDB /* OEGameCoreHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEGameCoreHelper.h; path = ../../OpenEmu/OEGameCoreHelper.h; sourceTree = "<group>"; };
 		83C5C3C81A90D618003C2DDB /* OEGameCoreManager_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEGameCoreManager_Internal.h; path = ../../OpenEmu/OEGameCoreManager_Internal.h; sourceTree = "<group>"; };
 		83C5C3C91A90D618003C2DDB /* OEGameCoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEGameCoreManager.h; path = ../../OpenEmu/OEGameCoreManager.h; sourceTree = "<group>"; };
@@ -171,6 +293,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		835306DA1A93C7D200009BFB /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				835306DB1A93C81400009BFB /* _beam4_1.cg */,
+				835306DC1A93C81400009BFB /* _beam4_2.cg */,
+				835306DD1A93C81400009BFB /* _beam4_3.cg */,
+				835306DE1A93C81400009BFB /* _stock.cg */,
+				835306DF1A93C81400009BFB /* Beam4.cgp */,
+				835306E01A93C81400009BFB /* Blinky.cg */,
+				835306E11A93C81400009BFB /* CRT.cg */,
+				835306E21A93C81400009BFB /* HQx */,
+				835306EE1A93C81400009BFB /* LCD3x.cg */,
+				835306EF1A93C81400009BFB /* NTSC (Blargg).cgp */,
+				835306F01A93C81400009BFB /* Pixellate.cg */,
+				835306F11A93C81400009BFB /* SABR.cg */,
+				835306F21A93C81400009BFB /* Scanline.cg */,
+				835306F31A93C81400009BFB /* Themaister NTSC */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		835306E21A93C81400009BFB /* HQx */ = {
+			isa = PBXGroup;
+			children = (
+				835306E31A93C81400009BFB /* _hq2x.cg */,
+				835306E41A93C81400009BFB /* _hq2x.png */,
+				835306E51A93C81400009BFB /* _hq3x.cg */,
+				835306E61A93C81400009BFB /* _hq3x.png */,
+				835306E71A93C81400009BFB /* _hq4x.cg */,
+				835306E81A93C81400009BFB /* _hq4x.png */,
+				835306E91A93C81400009BFB /* _pass1.cg */,
+				835306EA1A93C81400009BFB /* _pass2.inc */,
+				835306EB1A93C81400009BFB /* HQ2x.cgp */,
+				835306EC1A93C81400009BFB /* HQ3x.cgp */,
+				835306ED1A93C81400009BFB /* HQ4x.cgp */,
+			);
+			name = HQx;
+			path = ../../OpenEmu/Shaders/HQx;
+			sourceTree = "<group>";
+		};
+		835306F31A93C81400009BFB /* Themaister NTSC */ = {
+			isa = PBXGroup;
+			children = (
+				835306F41A93C81400009BFB /* _ntsc-decode-filter-3phase.inc */,
+				835306F51A93C81400009BFB /* _ntsc-gauss-pass.cg */,
+				835306F61A93C81400009BFB /* _ntsc-param.inc */,
+				835306F71A93C81400009BFB /* _ntsc-pass1-composite-3phase.cg */,
+				835306F81A93C81400009BFB /* _ntsc-pass1-encode-demodulate.inc */,
+				835306F91A93C81400009BFB /* _ntsc-pass1-vertex.inc */,
+				835306FA1A93C81400009BFB /* _ntsc-pass2-3phase.cg */,
+				835306FB1A93C81400009BFB /* _ntsc-pass2-decode.inc */,
+				835306FC1A93C81400009BFB /* _ntsc-pass2-vertex.inc */,
+				835306FD1A93C81400009BFB /* _ntsc-rgbyuv.inc */,
+				835306FE1A93C81400009BFB /* _ntsc-stock.cg */,
+				835306FF1A93C81400009BFB /* NTSC.cgp */,
+			);
+			name = "Themaister NTSC";
+			path = "../../OpenEmu/Shaders/Themaister NTSC";
+			sourceTree = "<group>";
+		};
 		83C5C3C61A90D604003C2DDB /* Game Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +445,7 @@
 		83F554861A9097FF00CFA34E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				835306DA1A93C7D200009BFB /* Shaders */,
 				833E39361A9141EF0068B120 /* hud_quicksave_notification.png */,
 				833E39371A9141EF0068B120 /* hud_quicksave_notification@2x.png */,
 				83F5548D1A9097FF00CFA34E /* Images.xcassets */,
@@ -389,6 +572,7 @@
 				83F554801A9097FF00CFA34E /* Frameworks */,
 				83F554811A9097FF00CFA34E /* Resources */,
 				83F554D41A909EBB00CFA34E /* Copy Frameworks */,
+				835307231A93C82000009BFB /* Copy Shaders */,
 			);
 			buildRules = (
 			);
@@ -436,7 +620,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				833E39391A9141EF0068B120 /* hud_quicksave_notification@2x.png in Resources */,
 				83F5548E1A9097FF00CFA34E /* Images.xcassets in Resources */,
 				83F554911A9097FF00CFA34E /* MainMenu.xib in Resources */,
 				833E39381A9141EF0068B120 /* hud_quicksave_notification.png in Resources */,
@@ -455,19 +638,26 @@
 				83F554E81A90A57200CFA34E /* snes_ntsc.c in Sources */,
 				83C5C4051A90EDD5003C2DDB /* OEDOGameCoreManager.m in Sources */,
 				83C5C3DA1A90EA5A003C2DDB /* OEXPCGameCoreManager.m in Sources */,
+				8353071B1A93C81400009BFB /* _ntsc-pass1-encode-demodulate.inc in Sources */,
 				83F5548C1A9097FF00CFA34E /* main.m in Sources */,
 				83C5C3F31A90EC27003C2DDB /* OpenEmuXPCHelperApp.m in Sources */,
 				83C5C3FC1A90ECB6003C2DDB /* OEGameAudio.m in Sources */,
 				83C5C3E81A90EB41003C2DDB /* OEUtilities.m in Sources */,
+				8353071F1A93C81400009BFB /* _ntsc-pass2-vertex.inc in Sources */,
+				835307171A93C81400009BFB /* _ntsc-decode-filter-3phase.inc in Sources */,
 				83C5C3E41A90EAB2003C2DDB /* OEThreadProxy.m in Sources */,
 				83F554AC1A909C4100CFA34E /* OECorePlugin.m in Sources */,
 				83F5548A1A9097FF00CFA34E /* AppDelegate.m in Sources */,
 				83F554CA1A909DF700CFA34E /* OEMultipassShader.m in Sources */,
+				835307191A93C81400009BFB /* _ntsc-param.inc in Sources */,
 				83F554B51A909CA500CFA34E /* OECGShader.m in Sources */,
 				83F554C41A909DB600CFA34E /* OEBuiltInShader.m in Sources */,
 				83C5C3F21A90EC27003C2DDB /* OpenEmuDOHelperApp.m in Sources */,
+				8353071E1A93C81400009BFB /* _ntsc-pass2-decode.inc in Sources */,
 				83C5C3E31A90EAB2003C2DDB /* OEThreadGameCoreManager.m in Sources */,
 				83F554A91A909C3200CFA34E /* OEPlugin.m in Sources */,
+				8353071C1A93C81400009BFB /* _ntsc-pass1-vertex.inc in Sources */,
+				835307201A93C81400009BFB /* _ntsc-rgbyuv.inc in Sources */,
 				83F554BB1A909D2900CFA34E /* OEShaderPlugin.m in Sources */,
 				83C5C3DB1A90EA5A003C2DDB /* OEXPCInterface.m in Sources */,
 				83F554DA1A90A4F800CFA34E /* OEGameView.m in Sources */,
@@ -476,6 +666,7 @@
 				83F554B21A909C9800CFA34E /* OEGLSLShader.m in Sources */,
 				83F554C71A909DCD00CFA34E /* OEGameShader.m in Sources */,
 				83F554AF1A909C4F00CFA34E /* OESystemPlugin.m in Sources */,
+				8353070E1A93C81400009BFB /* _pass2.inc in Sources */,
 				83F554CE1A909E1600CFA34E /* OELUTTexture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

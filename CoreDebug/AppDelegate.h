@@ -28,9 +28,14 @@
 
 #import "OELGameViewController.h"
 
-extern NSString * const OECoreLauncherLastROMPath;
+extern NSString * const OECoreLauncherLastROMPathKey;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSToolbarDelegate>
 @property (strong) IBOutlet OELGameViewController *gameViewController;
+
+- (IBAction)togglePause:(id)sender;
+- (IBAction)resetEmulation:(id)sender;
+- (IBAction)changeFilter:(id)sender;
+- (IBAction)changeVolume:(id)sender;
 @end
 
